@@ -1,0 +1,63 @@
+@charset "UTF-8";
+
+* {margin: 0; padding: 0;}
+li {list-style: none;}
+a {color: #333; text-decoration: none;}
+img {vertical-align: top;}
+
+body {
+    --mainC1:#003f73;
+    --textC1:#001122;
+    --textC2:#888;
+}
+
+.centerbox {max-width: 1400px; margin: 0 auto;}
+
+header {min-height: 85px; display: flex; }
+header .centerbox {display: flex; justify-content: space-between; border: 1px solid #ffc404; width: 1400px;}
+header .centerbox h1 {display: flex; align-items: center;}
+
+header .centerbox nav {display: flex; align-items: center;}
+header .centerbox nav .gnb {display: flex; font-size: 18px; border: 1px solid #000;}
+header .centerbox nav .gnb li {}
+header .centerbox nav .gnb li a {padding: 10px 2vw; display: block;}
+
+#visual {border: 1px solid #000; position: relative;}
+#visual img {width: 100%; }
+/*백그라운드로 넣는 법 { background: url(../img/visual.png) center center no-repeat; padding-top: 38.38%; background-size: cover;} */
+
+#visual .centerbox {position: absolute; top: 50%; left: 50%; transform: translate(-70%, -50%);}
+#visual .centerbox .textbox {word-break: keep-all;}
+#visual .centerbox .textbox strong { color: #fff; font-size: 3.65vw;line-height: 1.3;}
+#visual .centerbox .textbox p {font-size: 20px; color: #fff; margin-top: 30px;}
+
+
+
+
+/* 모바일 0~880 ,미디어쿼리 */
+@media screen and (max-width:880px) {
+    header .centerbox {flex-direction: column; align-items: center;}
+    header .conterbox nav .gnb li {font-size: 16px;}
+    
+    #visual {background: #000E22; padding-top: 100px;}
+    #visual .centerbox {width: 90%; transform: translate(-50%, -50%);}
+    #visual .centerbox .textbox strong {font-size: 30px;}
+    #visual .centerbox .textbox p {font-size: 16px; display: none;}
+}
+
+/* 모바일 0~300 ,미디어쿼리 */
+@media screen and (max-width:300px) {
+    header .centerbox nav .gnb li {font-size: 14px;}
+}
+
+#section_box section > div {padding: 100px 0;}
+#section_box section > div h2 {font-size: 40px; text-align: center; color: var(--mainC1); margin-bottom: 50px;}
+
+section .part1_1 {}
+section .part1_1 .content_box {display: flex; justify-content: space-between;}
+section .part1_1 .content_box li {}
+section .part1_1 .content_box li figure {border-radius: 15px; overflow: hidden;}
+section .part1_1 .content_box li .title {font-size: 20px; margin: 20px 0; color: var(--textC1); text-align: center; font-weight: bold;}
+section .part1_1 .content_box li .content {}
+section .part1_1 .content_box li .content li {font-size: 18px; color: var(--textC2); position: relative; padding-left: 10px;}
+section .part1_1 .content_box li .content li::before {content: ""; width: 4px; height: 4px; border-radius: 50%; background: var(--textC2); position: absolute; top: 12px; left: 0;}
